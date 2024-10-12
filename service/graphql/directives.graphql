@@ -1,0 +1,14 @@
+directive @disabled on FIELD_DEFINITION | OBJECT
+
+"""是否需要登陆"""
+directive @login on FIELD_DEFINITION | OBJECT
+
+"""是否拥有权限"""
+directive @hasPermission(key: String!) on FIELD_DEFINITION | OBJECT
+
+enum verifyCodeType {
+    """忘记密码"""
+    ForgetPassword
+    """注册验证"""
+    Register
+}
